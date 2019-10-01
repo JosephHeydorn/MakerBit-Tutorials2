@@ -1,0 +1,681 @@
+body, html {
+    -ms-overflow-style: none;
+}
+
+body#root {
+    font-size: 1rem;  
+    background-color: white;  
+}
+
+#root .editor-image {
+    margin: 2em auto;
+    display: block;
+    max-width: 80%;    
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+}
+
+code {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 3px;
+}
+
+p code, li code {
+    background-color: rgba(0,0,0,0.04);    
+}
+
+p code:before, p code:after,
+li code:before, li code:after {
+    letter-spacing: -0.2em;
+    padding: 0 !important;
+    content: "\00a0";
+}
+
+code.hljs {
+    padding: 0 !important;
+}
+
+.ui[class*="5:3"].embed {
+    padding-bottom: 83%;
+    background:transparent !important;
+}
+
+div.blocks-svg-list > svg {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+    vertical-align: top;
+}
+
+code {
+        white-space: pre-wrap;
+}
+code.lang-ghost, code.lang-config, code.lang-package 
+{ display: none;}
+
+code.lang-block::before,
+code.lang-blocks::before,
+code.lang-blocksxml::before,
+code.lang-sig::before,
+code.lang-block::before,
+code.lang-sim::before,
+code.lang-cards::before,
+code.lang-namespaces::before,
+code.lang-codecard::before,
+code.lang-shadow::before,
+code.lang-spy::before
+{
+    content:"...";
+    position: absolute;
+    top:calc(50% - 0.5em);
+    left:calc(50% - 5em);
+}
+code.lang-block,
+code.lang-blocks,
+code.lang-blocksxml,
+code.lang-sig,
+code.lang-block,
+code.lang-sim,
+code.lang-cards,
+code.lang-namespaces,
+code.lang-codecard,
+code.lang-shadow,
+code.lang-spy
+{
+    background-color: rgba(0,0,0,0.04);
+    color:transparent;
+}
+
+/* Limit width of text so that it's readable
+ */
+.ui.text li {
+    transition: width .5s;
+    transition-timing-function: ease;
+}
+
+.poweredBy > span.item {
+    margin-right:.5rem;
+}
+
+/* wrap cards header */
+.ui.card > .content > .header {
+    word-break: break-all;
+}
+
+svg {
+    max-width: 100%;
+}
+
+.blocklyText {
+    font-family:'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
+}
+
+.blocklyCheckbox,
+.blocklyLed {
+    fill: #ff3030 !important;
+    text-shadow: 0px 0px 6px #f00;
+    font-size: 17pt !important;
+}
+
+.ui.card .blocklyPreview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 1em);
+    max-height: calc(100% - 1em);
+}
+
+.header .ui.mini.image {
+    display: inline !important;
+    margin-right: 7px;
+}
+
+#accessibleMenu .ui.item.link {
+    position: absolute;
+    height: 4em;
+    line-height: 4em;
+    font-size: 1em;
+    text-align: center;
+    color: #387894;
+    background: hsla(0,0%,100%,.9)!important;
+}
+
+.pusher .article {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 300px;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-box-flex: 1;
+
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    min-width: 0px;
+}
+
+.pusher .article-inner {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 4rem;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.article-inner {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.article-inner {
+    overflow-x: hidden;
+}
+
+.ui.vertical.menu .menu .item {
+    font-size: 1em;
+}
+
+#pagemenu {
+    border-radius: 0;    
+}
+
+#pagemenu .ui.item .header {
+    padding: 0;
+}
+
+.fixed.menu > .container {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.fixed.menu > .container > .item {
+    padding: 26px;
+}
+
+/* breadcrumbs in inverted view */
+.inverted .ui.breadcrumb a, .inverted .ui.breadcrumb .icon {
+    color: white;
+}
+
+/* inverted link colour */
+.ui.inverted.link.list .item, .ui.inverted.link.list a.item, .ui.inverted.link.list .item a:not(.ui) {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+/* navigation */
+.navigation {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    margin: 0;
+    padding: 10px;
+    max-width: 5rem;
+    min-width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 40px;
+    color: #ccc;
+    text-align: center;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+.navigation:hover {
+    text-decoration: none;
+}
+.navigation.icon {
+    width: 100%;
+}
+
+.navigation.navigation-next {
+    right: 0;
+    margin-right: 15px;
+}
+
+.navigation.navigation-prev {
+    left: 0;
+}
+
+.ui.menu.tocmenu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    height: 100%;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0;
+}
+
+.ui.menu.tocmenu .menuContainer {
+    margin-bottom: 45px;
+    margin-top:0px;
+}
+
+.cc-banner {
+    display: none;
+}
+
+.showmobile {
+    display: none;
+}
+
+
+@supports (-ms-ime-align:auto) {
+    #docs .mainbody {
+        margin-top:4rem;
+    }
+    #docs .topspace {
+        position: fixed;
+        top:0px;
+        width:100%;
+    }
+    #docs #printbtn i.icon.print {
+        width: 1.6em;
+    }
+}
+
+@media (min-width: 970) and (max-width: 1144){
+    .ui.grid.mainbody.content-width, .ui.vertical.footer.content-width {
+        width: 64vw;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 970px) {
+
+#docs .ui.hero {
+    margin-top: -48px;
+    width: 105vw;
+    margin-left: -10vw;
+    padding-left: 18%;
+}
+
+#docs .ui.hero .main-description {
+    margin-top: 1rem;
+}
+
+#docs .ui.hero .main-description h1 {
+    font-size: 3rem;
+}
+
+#docs .ui.breadcrumb:first-child {
+    margin-top: 16px;
+}
+
+#docs h1 {
+        margin-bottom: .5em;
+        font-size: 2.5rem;
+}
+#docs h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+#docs h2:not(:first-of-type) {
+    padding-top: 35px;
+}
+
+.docnav {
+    flex-wrap: wrap;
+    height: 9rem;
+    padding-left: 2rem;
+}
+
+#tocsearch1 {
+    display: none;
+}
+
+#tocsearch2 {
+    display: block;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 48px;
+    transition: opacity 0.3s ease-in, visibility .3s ease-in;
+    opacity: 0;
+    touch-action: none;
+}
+
+#tocsearch2 .ui.icon.input {
+    position: fixed;
+    width: 100vw;
+    left: 0%;
+    top: 3rem;
+    padding: 1rem;
+}
+
+@supports (-ms-ime-align:auto) {
+    #tocsearch2 .ui.icon.input {
+        top: 6rem;
+    }
+}
+
+#tocsearch2 .ui.icon.input i{
+    right: 1rem;
+}
+
+#tocsearch2 .ui.icon.input input{
+    right: 1rem;
+}
+
+#docsMobile {
+    padding-top: 4rem;
+}
+
+.mobile-menu {
+    display:block !important;
+}
+
+#sticky-column {
+    display:none !important;
+}
+
+.sticky-list {
+    display:none;
+    position: fixed;
+    top: 96px;
+    right: 0rem;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.sticky-close {
+    position: absolute;
+    top: -48px;
+    right: -4px;
+    background-color: white;
+    height: 48px;
+    width: 48px;
+    border: none;
+}
+
+.sticky-list ul {
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+    margin-top:0;
+}
+
+#mobile-search-icon {
+    display: block;
+    text-decoration: none;
+}
+
+#mobile-search-icon.mobile-only-close {
+    display: none;
+}
+
+#mobile-search-icon.mobile-only-open {
+    display: block;
+}
+
+#mobile-search-close.mobile-only-close {
+    display: none;
+}
+
+#mobile-search-close.mobile-only-open {
+    display: block;
+}
+
+#sticky-btn {
+    position: fixed;
+    right: .67rem;
+    z-index: 100;
+    color: white;
+    top: 3.7rem;
+    display: block !important;
+    background:none;
+    border:none
+}
+
+#docs-header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#breadcrumb-container .ui.breadcrumb:first-child {
+    margin-top: -66px;
+}
+
+#breadcrumb-container .ui.breadcrumb a {
+    color: #f5f5f5;
+}
+
+#breadcrumb-container .ui.breadcrumb .divider {
+    color: #f5f5f5;
+    margin-right: .25rem;
+}
+
+#breadcrumb-container .ui.breadcrumb a.active {
+    color: #fff;
+}
+
+#docs .ui.cards {
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#docs .ui.card>.image .ui.cardimage {
+    height: 14.5rem;
+}
+
+#docs .ui.card .content {
+    padding-top: 25px;
+    padding-right: 0;
+}
+
+#docs .ui.card {
+    flex-flow: column;
+    height: 20rem;
+}
+
+#docs .ui.card {
+    width: 100%;
+}
+
+#docs .ui.card > .image {
+    width: 100%;
+}
+
+#docs .ui.card > .image > div {
+    min-height: 14em !important;
+}
+
+.ui.grid.mainbody {
+    margin-top: 7rem;
+    padding-left: 1rem;
+    padding-right: 1rem !important;
+}
+#docs .mainbody {
+    margin-top: 7em;
+    padding-bottom: 3em;
+}
+#docsMobile {
+    width: 70%;
+}
+.ui.visible.wide.left.sidebar~.fixed, .ui.visible.wide.left.sidebar~.pusher {
+    -webkit-transform: translate3d(70vw,0,0);
+    transform: translate3d(70vw,0,0);
+}
+
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+    #docs .ui.hero .main-description {
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width: 1144px) {
+    .pusher > .toc {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        z-index: 1;
+        overflow-y: auto;
+    }
+    .navigation.navigation-prev {
+        left: 200px;
+    }
+    .pusher > .toc {
+        display: none;
+    }
+    .hidemobile {
+        display: none !important;
+    }
+    .showmobile {
+        display: block;
+    }
+    .pusher .article {
+        left: 0;
+    }
+    .navigation.navigation-next {
+        margin-right: 0;
+    }
+    .ui.container.mainbody {
+        margin-top: 3rem;
+        margin-left: 0!important;
+        margin-right: 0!important;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .navigation {
+        position: relative; /* IE doesn't support static */
+        position: static;
+        top: auto;
+        max-width: 48%;
+        width: 50%;
+        display: inline-block !important;
+    }
+    .navigation.navigation-prev {
+        left: 0px;
+    }
+    .ui.vertical.segment.footer {
+        margin-top: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    #docs .ui.card {
+        width: 100%;
+    }
+
+    .ui.grid.mainbody.content-width, .ui.vertical.footer.content-width {
+        width: 70vw;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 971) and (max-width: 1024) {
+    .sticky-list {
+        position: fixed;
+        top: 11vh;
+        right: 3rem;
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #docs .ui.card {
+        width: 100%;
+    }
+
+    .ui.grid.mainbody.content-width, .ui.vertical.footer.content-width {
+        width: 63vw;
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1145px) {
+    .fixed.main.menu {
+        display: none;
+    }
+
+    .mainbody {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+/**
+print only stuff
+**/
+.showprint {
+    display:none !important;
+}
+
+@media only print {
+
+    #root {
+        position: relative;
+    }
+    #sticky-column, #printbtn{
+        display:none !important;
+    }
+
+    h2 {
+        page-break-before: avoid
+    }
+
+    #docs .ui.card{
+        width: 100%;
+    }
+
+    .pusher .article {
+        left: 0;
+        position: relative;
+    }
+    .pusher .article-inner {
+        position: relative;
+    }
+    .pusher {
+        background: transparent !important;
+    }
+    .showprint {
+        display: block !important;
+    }
+    .hideprint,
+    .ui.embed > .icon,
+    .ui.docbutton {
+        display:none !important;
+    }
+    body.pushable {
+        background: #fff !important;        
+    } 
+
+   
+}
+ 
