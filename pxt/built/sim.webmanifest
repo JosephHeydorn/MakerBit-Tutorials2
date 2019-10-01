@@ -1,0 +1,13 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Microsoft MakeCode",
+  "short_name": "Microsoft MakeCode",
+  "background_color": "#FAFAFA",
+  "icons": [],
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#E2008C"
+}
